@@ -11,10 +11,14 @@ CSS
 JavaScript
 
 # Features
-# Product Listing: Display of various products with details such as name, price, and discount percentage.
-# Add to Cart: Users can add products to their cart by clicking the "Add to Cart" button.
-# Remove from Cart: Users can remove products from their cart by clicking the "Remove" button.
-# Calculate Discount: The application automatically calculates the discounted price based on the given discount percentage.
+# Product Listing: 
+Display of various products with details such as name, price, and discount percentage.
+# Add to Cart: 
+Users can add products to their cart by clicking the "Add to Cart" button.
+# Remove from Cart: 
+Users can remove products from their cart by clicking the "Remove" button.
+# Calculate Discount: 
+The application automatically calculates the discounted price based on the given discount percentage.
 
 # Installation
 To run this project locally, simply download or clone the repository to your local machine:
@@ -34,7 +38,7 @@ static-add-to-cart/
 │   style.css
 │   script.js
 │   README.md
-│   images/
+│   assets/
 │       product1.jpg
 │       product2.jpg
 │       ...
