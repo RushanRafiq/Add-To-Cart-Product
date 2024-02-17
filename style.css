@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+html,
+body {
+  /* height: 100%; */
+  width: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(to right bottom, #873572, black); */
+}
+a {
+  display: inline-block;
+  color: lightgrey;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.23);
+  color: white;
+  transform: scale(1.03);
+  text-decoration: none;
+}
+a:active {
+  transform: scale(0.98);
+}
+
+/* product container css */
+.container{
+  margin: 40px 0px;
+}
+
+#main-product-image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.product-image-sub-container{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin: 20px 30px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+#sub-image:hover {
+  cursor: pointer;
+  border: 3px solid rgba(58, 73, 128, 1);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* price section */
+#pricing-section{
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+#discounted-price {
+  font-size: 32px;
+  font-weight: bolder;
+  color: rgba(58, 73, 128, 1);
+  margin: 0;
+}
+#actual-price {
+  text-decoration: line-through;
+  color:rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+}
+#discount-percentage {
+  color:rgba(255, 0, 0, 0.5);
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* choose color section */
+#choose-color-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#checkbox1 {
+  background-color: rgba(236, 222, 204, 1);
+}
+#checkbox2 {
+  background-color: rgba(187, 210, 120, 1);
+}
+#checkbox3 {
+  background-color: rgba(187, 193, 248, 1);
+}
+.checkbox {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative; /* Ensure proper stacking of tick and background */
+  color: rgba(236, 222, 204, 1);
+}
+
+.checked::after {
+  content: '\2713'; /* Unicode character for tick */
+  font-size: 32px; /* Adjust the size of the tick */
+  position: absolute;
+  top: 50%; /* Position tick vertically centered */
+  left: 50%; /* Position tick horizontally centered */
+  transform: translate(-50%, -50%); /* Center the tick */
+  color: white; /* Color of the tick */
+}
+
+.checked::before {
+  content: '';
+  position: absolute;
+  top: -6px; /* Adjust this value to control the gap between border and box */
+  left: -6px; /* Adjust this value to control the gap between border and box */
+  right: -6px; /* Adjust this value to control the gap between border and box */
+  bottom: -6px; /* Adjust this value to control the gap between border and box */
+  border: 3px solid;
+  border-color: inherit; /* Use the same color as the box */
+  border-radius: 5px; /* Adjust the border radius as needed */
+}
+/* radion size selection */
+#select-size-section{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 10px 0px 30px 0px;
+}
+
+.radio-container {
+  display: block;
+  background-color: rgba(237, 240, 248, 1);
+  width: max-content;
+  padding: 4px 15px;
+  color:rgba(58, 73, 128, 1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked  {
+  background-color:rgba(58, 73, 128, 1);
+}
+
+/* product add cart section */
+#add-cart-action{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-style{
+  cursor: pointer;
+}
+
+#product-count-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(243, 243, 243, 1);
+  color:rgba(58, 73, 128, 1);
+  font-size: large;
+  font-weight: 600;
+}
+.primary-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(58, 73, 128, 1);
+  color: white;
+  border-radius: 25px;
+  height: 50px;
+  width: 250px;
+  font-size: large;
+  gap: 20px;
+}
+
+/* product description dection */
+#text-color{
+  color:rgba(163, 163, 163, 1);
+}
