@@ -3,7 +3,8 @@ html,
 body {
   /* height: 100%; */
   width: 100%;
-  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
 }
 body {
   display: flex;
@@ -33,30 +34,50 @@ a:hover {
 a:active {
   transform: scale(0.98);
 }
-
+hr {
+  background-color: rgba(163, 163, 163, 1);
+  margin-top: 15px;
+}
 /* product container css */
-.container{
-  margin: 40px 0px;
+.main-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  grid-gap: 10px; /* Gap between grid items */
 }
 
 #main-product-image {
-  width: 100%;
-  object-fit: contain;
+  width: 90%;
+  object-fit: cover;
   border-radius: 10px;
+  /* text-align: center; */
 }
 .product-image-sub-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  margin: 20px 30px;
+  margin-top: 20px;
   box-sizing: border-box;
-  overflow: auto;
+  /* overflow: auto; */
+  /* width: 100% !important; */
+}
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .main-container {
+    grid-template-columns: auto; /* Each column takes full width */
+    justify-content: center;
+  }
+}
+#sub-image{
+  border: 2.5px solid white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 20%;
 }
 #sub-image:hover {
   cursor: pointer;
-  border: 3px solid rgba(58, 73, 128, 1);
-  border-radius: 10px;
-  box-sizing: border-box;
+  border:2.5px solid rgba(58, 73, 128, 1);
 }
 
 /* price section */
@@ -156,6 +177,7 @@ input[type="radio"]:checked  {
 #add-cart-action{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
